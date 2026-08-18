@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Mac Zoom Scroll",
+    "version": "1.0",
+    "description": "Cmd+마우스 휠 스크롤/클릭으로 화면을 확대/축소/초기화합니다.",
+    "permissions": [
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}
